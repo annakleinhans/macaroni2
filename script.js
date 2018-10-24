@@ -100,7 +100,11 @@ function canBalance (arr){
 }
 
 /* countClumps */
-function countClumps (x) {
-    var clumps = "";
-
+function countClumps (arr) {
+    var clumps = 0;
+    for(var i = 0; i < arr.length; i ++){
+        clumps = clumps + 1;
+        for(var j = i + 1; j < arr.length; j++){
+            if (arr[i] 
+            
 }
