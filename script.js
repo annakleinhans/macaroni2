@@ -99,12 +99,31 @@ function canBalance (arr){
 
 }
 
+
 /* countClumps */
 function countClumps (arr) {
-    var clumps = 0;
-    for(var i = 0; i < arr.length; i ++){
-        clumps = clumps + 1;
-        for(var j = i + 1; j < arr.length; j++){
-            if (arr[i] 
-            
+   var clump = 0;
+   for(var i = 0; i < arr.length; i++){
+       if (arr[i] == arr[i + 1]){
+           clump++;
+           for (var j = i + 1; j < arr.length; j++){
+               if (arr[j] != arr[j + 1]){
+                   i = j;
+                   break;
+               }
+           }
+       }
+
+   }
+   return clump;
 }
+
+/* evenlySpaced */
+function evenlySpaced (a, b, c){
+    var avg = (Math.max(a, b, c) + Math.min(a, b, c)) / 2;
+    if (avg == a|| avg == b || avg == c){
+        return true;
+    }
+    return false;
+}
+
